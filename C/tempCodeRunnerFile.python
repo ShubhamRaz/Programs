@@ -1,0 +1,26 @@
+# Open the file in read mode
+with open(r'C:\Users\kumar\OneDrive\Desktop\ShardaStd.txt', 'r') as file:
+    # Read the entire content of the file
+    content = file.read()
+
+# Replace newline characters with spaces
+single_line = content.replace('\n', ' ')
+
+# Output the result
+# print(single_line)
+
+# Optionally, write the single line back to another file
+with open('single_line_output.txt', 'w') as output_file:
+    output_file.write(single_line)
+
+NewLine = single_line.split(",")
+
+# print(NewLine)
+
+for i in NewLine:
+    Email = i.split(".")
+    for Name in Email:
+        if Name == "durga@sharda":
+            print(f"Present- {Email}")
+        else:
+            continue
